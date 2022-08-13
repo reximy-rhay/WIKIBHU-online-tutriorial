@@ -70,7 +70,7 @@ if (isset($_POST['reg_user'])) {
   	mysqli_query($db, $query);
   	$_SESSION['email'] = $email;
   	$_SESSION['success'] = "You are now logged in";
-  	header('location: index.php');
+  	header('location: login.php');
   }
 }
 
@@ -93,9 +93,9 @@ if (isset($_POST['login_user'])) {
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['email'] = $email;
           $_SESSION['success'] = "You are now logged in";
-          header('location: index.php');
+          header('location: Level.php');
         }else {
-            array_push($errors, "Wrong email/password combination...Story no clear!!");
+            array_push($errors, "Wrong email/password combination.");
         }
     }
   }
