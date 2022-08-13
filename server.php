@@ -10,8 +10,7 @@ $email    = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'userregistration');
-
+$db = mysqli_connect('us-cdbr-east-06.cleardb.net', 'bafe26669f7a64', 'e22c538e', 'heroku_2c1b833fcb428fb');
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
