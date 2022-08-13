@@ -118,7 +118,7 @@ if (isset($_POST['login_user'])) {
               if ($updateResult) {
                   $subject = 'Forgotten Password Verification Code';
                   $message = "Do not Disclose OTP To Verify your Account, Input OTP for Confirmation $code";
-                  $sender = 'From: raymondogunrinde@gmail.com';
+                  $sender = 'From: be6f18404f3d70ee8eaa@cloudmailin.net';
 
                   if (mail($email, $subject, $message, $sender)) {
                       $message = "We've sent a verification code to your Email <br> $email"; 
