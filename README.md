@@ -1,2 +1,2 @@
 # Online Tutorial Past Questions and Answers
-veiw full demo https://wikibhu.herokuapp.com/
+veiw full demo https://main--stalwart-tartufo-9941f0.netlify.app/
