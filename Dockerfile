@@ -1,14 +1,14 @@
-# Use the official PHP image
 FROM php:8.2-cli
 
-# Optional: install unzip if needed
-RUN apt-get update && apt-get install -y unzip
+# Install mysqli extension
+RUN docker-php-ext-install mysqli
 
-# Copy all project files into the container's /app folder
-COPY . /app
+# Copy your code into the container
+COPY . /usr/src/myapp
+WORKDIR /usr/src/myapp
 
-# Set the working directory
-WORKDIR /app
+# Expose port 80 (for Render)
+EXPOSE 80
 
-# Start the built-in PHP server
-CMD ["php", "-S", "0.0.0.0:3000", "-t", "."]
+# Start PHP's built-in server
+CMD ["php", "-S", "0.0.0.0:80", "-t", "."]
